@@ -41,7 +41,7 @@ COLOR PALETTE
 ***********/
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900');
-
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600&display=swap');
 /*********************************
 2. Body and some general stuff
 *********************************/
@@ -53,7 +53,7 @@ COLOR PALETTE
 }
 body
 {
-	font-family: 'Poppins', sans-serif;
+    font-family: 'Hind Siliguri', sans-serif;
 	font-size: 14px;
 	line-height: 23px;
 	font-weight: 400;
