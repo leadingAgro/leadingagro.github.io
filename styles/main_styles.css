@@ -273,7 +273,7 @@ section
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
-    z-index: 10;
+    z-index: 99;
     backdrop-filter: blur(10px); /* Note the parentheses and units */
 }
 .top_nav
@@ -578,7 +578,7 @@ section
 }
 .navbar_menu li a:hover
 {
-	color: #b5aec4;
+	color: #0c5a10;
 }
 .navbar_user
 {
@@ -650,8 +650,8 @@ section
 }
 .hamburger_container i
 {
-	font-size: 24px;
-	color: #1e1e27;
+	font-size: 34px;
+	color: #474747;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -669,8 +669,8 @@ section
 	right: -400px;
 	width: 400px;
 	height: 100vh;
-	background: rgba(255,255,255,0.95);
-	z-index: 10;
+	background: rgba(255, 255, 255, 0.938);
+	z-index: 100;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -707,8 +707,8 @@ section
 }
 .hamburger_close i
 {
-	font-size: 24px;
-	color: #1e1e27;
+	font-size: 44px;
+	color: #3a3a3a;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -730,18 +730,19 @@ section
 {
 	display: block;
 	position: relative;
-	border-bottom: solid 1px #b5aec4;
+	border-bottom: solid 1px #30303000;
 	vertical-align: middle;
 }
 .menu_item > a
 {
 	display: block;
-	color: #1e1e27;
+	color: #2e2e2e;
 	font-weight: 500;
 	height: 50px;
 	line-height: 50px;
-	font-size: 14px;
+	font-size: 34px;
 	text-transform: uppercase;
+	
 }
 .menu_item > a:hover
 {
@@ -779,7 +780,7 @@ section
 .menu_selection li a
 {
 	display: block;
-	color: #232530;
+	color: #ff0000;
 	border-bottom: solid 1px #dddddd;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -1316,6 +1317,8 @@ section
 	width: 100%;
 	height: 340px;
 	margin-top: 73px;
+	background: #ffffffb6;
+	padding-top: 15px;
 }
 .product_slider_container::after
 {
@@ -1325,7 +1328,7 @@ section
 	right: 0;
 	width: 1px;
 	height: 100%;
-	background: #FFFFFF;
+	background: #ffffff00;
 	content: '';
 	z-index: 1;
 }
@@ -1355,7 +1358,7 @@ section
 	position: absolute;
 	width: 30px;
 	height: 70px;
-	background: #d3d3d6;
+	background: #55e00473;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
@@ -1413,8 +1416,8 @@ section
 .benefit_item
 {
 	height: 100px;
-	background: #f3f3f3;
-	border-right: solid 1px #FFFFFF;
+	background: #f3f3f3cb;
+	border-right: solid 1px #00000000;
 	padding-left: 25px;
 }
 .benefit_col:last-child .benefit_item
@@ -1693,4 +1696,104 @@ section
 .footer_social ul li a:hover
 {
 	color: #164f1e;
+}
+
+.main_slider {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+.bg_video {
+    position: absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index:0;
+    pointer-events:none;
+}
+
+
+
+/* .main_slider_content {
+    z-index:2;
+    position:relative;
+    color:white;
+}
+
+/* optional subtle overlay */
+.main_slider::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    z-index:1;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;   /* hero takes whole screen height */
+  overflow: hidden;
+}
+
+.hero_video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  height:100vh;
+  object-fit: cover;
+  z-index:-1;
+}
+
+.hero + section {
+  position: relative;
+  z-index: 10;
+  background:white;
+}
+
+.hero::after {
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:200px;
+  background:linear-gradient(180deg, transparent, white);
+  pointer-events:none;
+  z-index:2;
+} */
+
+.main_slider {
+    position: relative;
+    height: 100vh;          /* hero = one full viewport */
+    overflow: hidden;
+}
+
+.bg_video {
+    position: fixed;        /* not absolute here */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.main_slider_content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* after hero, normal content will cover the fixed video */
+.main_slider + section,
+.main_slider + div,
+.main_slider + header,
+.main_slider + footer {
+    position: relative;
+    z-index: 10;
+    background: white;      /* or theme BG */
 }
